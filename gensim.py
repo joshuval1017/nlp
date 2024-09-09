@@ -26,7 +26,7 @@ def process_text(text):
     return tokens, stemmed_tokens, lemmatized_tokens
 
 # Example usage
-if name == "main":
+if __name__ == "__main__":
     # Accept input text from the user
     user_text = input("Enter a sentence or paragraph: ")
     
