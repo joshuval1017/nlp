@@ -14,7 +14,7 @@ def process_text(text):
     
     # Remove stop words
     stop_words = set(stopwords.words('english'))
-    tokens = [token for token in tokens if token not in stop_words]
+    tokens = [token for token in tokens if token not in stop_words and token.isalnum()]  # Keep only alphanumeric tokens
     
     # Stemming
     stemmer = PorterStemmer()
@@ -27,7 +27,7 @@ def process_text(text):
     return tokens, stemmed_tokens, lemmatized_tokens
 
 # Example usage
-if name == "main":
+if __name__ == "__main__":
     # Accept input text from the user
     user_text = input("Enter a sentence or paragraph: ")
     
